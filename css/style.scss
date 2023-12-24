@@ -1,0 +1,94 @@
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/forms/form-control";
+//Importowanie różnych elementów z bootstrapa, aby je móc później edytować lub brać z nich wartości dla dalszego stylowania elementów
+
+$primary-color: #6699ff;
+$secondary-color: #3377ff;
+$border-right-radius: 20px;
+//Tworzenie trzech zmiennych dla dalszego ich wykorzystania i niekoniecznie przepisywania tego samego kodu oddzielnie. Łatwość w obsłudze i edytowaniu.
+
+*
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+//Usunięcie nieładnych przerw na każdej przeglądarce
+body
+{
+    background-color: $primary-color;
+}
+//Ustawienie koloru tła na #6699ff
+.container-fluid
+{
+    padding: 30px;
+
+    .input-group
+    {
+        display: flex;
+        justify-content: center;
+        //ustawienie inputa i przycisku na środku strony
+
+        #btn-main
+        {
+            background-color: $secondary-color;
+            width: 40px;
+            border-top-right-radius: $border-right-radius;
+            border-bottom-right-radius: $border-right-radius;
+            //ustawienie koloru, szerokości i zaokrąglenia prawego górnego oraz dolnego rogu przycisku
+        }
+        .form-control-sm
+        {
+            width: 190px;
+            //ustawienie szerokości paska do wpisania nazwy kryptowaluty
+        }
+    }
+    
+}
+.container
+{
+    background-color: $white;
+    border: 3px solid $secondary-color;
+    padding: 8px;
+    height: 250px;
+    width: 300px;
+    font-weight: bold;
+    color: #1c3b79;
+    //Ustawienie koloru tła, obramowanie, margines wewnętrzny, wysokość, szerokość, pogrubienie tekstu i kolor tekstu
+
+    img
+    {
+        border: 3px solid #acc7ff;
+        border-radius: 50px;
+        float: right;
+        //Ustawienie obramowania, zaokrąglenia rogów i opływania (ustawienia) po prawej stronie obrazu/wyglądu kryptowaluty dla estetyki
+    }
+}
+#warning
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    pointer-events: none;
+    //Ustawienie flexboxa dla elementów pod warningiem, aby były jedno pod drugim. Odstęp między nimi wynosi 20px i nakierowując myszką na tekst, to 
+    //myszka nie przybiera różnych kształtów.
+    p
+    {
+        font-size: 1.2rem;
+        //Ustawienie rozmiaru czcionki na 1.2rem - 1.2 * 16px = 19,2px
+    }
+
+    p:first-of-type + p
+    {
+        font-size: 0.72rem;
+        //Ustawienie mniejszego rozmiaru czcionki dla elementu p następującym po pierwszym elemencie p (Czyli rozmiar czcionki będzie mieć drugi element p)
+        //0.72rem - 0.72 * 16px = 11,52px
+    }
+}

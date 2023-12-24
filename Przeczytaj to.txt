@@ -1,0 +1,1 @@
+Dokumentacja o elementach arkuszu stylów jest zawarta w arkuszu style.scss.
