@@ -68,9 +68,9 @@ $(document).ready(function()
                         $("p").eq(0).text("Nazwa: " + response.name);
                         $("p").eq(1).text("Symbol: " + response.symbol);
                         $("p").eq(2).text("Obecna cena: " + priceOfCrypto + " zł");
-                        $("p").eq(3).text("Zmiana % w ciągu godziny: " + response.priceChange1h + "%");
-                        $("p").eq(4).text("Zmiana % w ciągu dnia: " + response.priceChange1d + "%");
-                        $("p").eq(5).text("Zmiana % w ciągu tygodnia: " + response.priceChange1w + "%");
+                        $("p").eq(3).text("Zmiana ceny w ciągu godziny: " + response.priceChange1h + "%");
+                        $("p").eq(4).text("Zmiana ceny w ciągu dnia: " + response.priceChange1d + "%");
+                        $("p").eq(5).text("Zmiana ceny w ciągu tygodnia: " + response.priceChange1w + "%");
                         $("img").eq(0).attr('src', response.icon);
                         //Uzupełnienie tekstu do paragrafów o poszczególnych informacjach z API o danej kryptowalucie oraz dodanie obrazu takiej kryptowaluty.
                         
